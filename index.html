@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="w-4/5 h-auto mx-auto bg-slate-300 py-10 my-10">
+      <div
+        class="flex items-center w-5/6 mx-auto justify-between rounded-lg bg-white pl-2"
+      >
+        <div class="flex items-center">
+          <img class="w-40" src="./images/product-1.png" alt="" />
+          <h3 class="text-xl font-bold">IPhone 11 128GB Black</h3>
+        </div>
+        <div class="flex items-center pr-5">
+          <button class="text-2xl font-bold p-4" id="minus-btn">-</button>
+          <input
+            type="number"
+            name=""
+            id="phone-quantity"
+            class="border-2 h-12 w-14 text-2xl font-bold pl-4"
+            value="0"
+            readonly
+          />
+          <button
+            id="plus-btn"
+            onclick="calculate(true, phoneQuantity, phonePrice, 1200)"
+            class="text-2xl font-bold p-4"
+          >
+            +
+          </button>
+          <h5 class="text-xl font-bold p-4">
+            $ <span id="phone-price">0</span>
+          </h5>
+          <button class="ml-4 w-4">
+            <img src="./images/remove.png" alt="" />
+          </button>
+        </div>
+      </div>
+      <div
+        class="flex items-center justify-between rounded-lg my-4 w-5/6 mx-auto bg-white pl-2"
+      >
+        <div class="flex items-center">
+          <img class="w-40" src="./images/product-2.png" alt="" />
+          <h3 class="text-xl font-bold pl-3">
+            iPhone 11 Silicone Case - Black
+          </h3>
+        </div>
+        <div class="flex items-center pr-5">
+          <button id="case-minus-btn" class="text-2xl font-bold p-4">-</button>
+          <input
+            type="number"
+            name=""
+            id="case-quantity"
+            class="border-2 h-12 w-14 text-2xl font-bold pl-4"
+            value="0"
+            readonly
+          />
+          <button
+            onclick="calculate(true, caseQuantity, casePrice, 60);"
+            id="case-plus-btn"
+            class="text-2xl font-bold p-4"
+          >
+            +
+          </button>
+          <h5 class="text-xl font-bold p-4">
+            $ <span id="case-price">00</span>
+          </h5>
+          <button class="ml-4 w-4">
+            <img src="./images/remove.png" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="rounded-lg my-4 w-5/6 mx-auto bg-white pl-2 text-xl">
+        <div class="flex justify-between px-4">
+          <p>Sub-total:</p>
+          <p>$ <span id="sub-total">00</span></p>
+        </div>
+        <div class="flex justify-between px-4">
+          <p>Tax:</p>
+          <p>$ <span id="tax">00</span></p>
+        </div>
+        <div class="flex justify-between px-4">
+          <p>total:</p>
+          <p>$ <span id="grand-total">00</span></p>
+        </div>
+      </div>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>
